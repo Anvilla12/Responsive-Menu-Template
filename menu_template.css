@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+    background: purple;
+}
+
+body::before{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    content: 'FULL';
+    font-size: 5rem;
+}
+
+.template > *{
+    box-shadow: inset 3px 3px 5px #00000080,
+    inset -3px -3px 5px #000000bf;
+    border-radius: 12px;
+}
+
+.logo{
+    grid-area: logo;
+    background: #000b1245;
+}
+.nav{
+    grid-area: nav;
+    background: #01264245;
+}
+.cont{
+    grid-area: cont;
+    background: #025ca145;
+}
+.foot{
+    grid-area: foot;
+    background: #b8b8b845;
+}
+
+.template{
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: inset 3px 3px 5px #00000080;
+    min-height: 85vh;
+    display: grid;
+    gap: 2px;
+    grid-template:
+    'logo nav nav' 150px
+    'cont cont cont' auto
+    'foot foot foot' 200px/
+    33% auto 50%;
+}
+
+
+
+@media(max-width: 1400px){
+    body{
+        background: blue;
+    }
+    body::before{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        content: 'HUGE';
+        font-size: 5rem;
+    }
+    .template{
+        grid-template:
+        'logo nav nav' 125px
+        'cont cont cont' auto
+        'foot foot foot' 200px/
+        40% auto 50%;
+    }
+}
+
+@media(max-width: 1200px){
+    body{
+        background: green;
+    }
+    body::before{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        content: 'EXTRALARGE';
+        font-size: 5rem;
+    }
+}
+
+@media(max-width: 992px){
+    body{
+        background: yellow;
+    }
+    body::before{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        content: 'LARGE';
+        font-size: 5rem;
+    }
+    .template{
+        grid-template:
+        'logo nav nav' 125px
+        'cont cont cont' auto
+        'foot foot foot' 200px/
+        50% auto auto;
+    }
+}
+
+
+@media(max-width: 768px){
+    body{
+        background: orangered;
+    }
+    body::before{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        content: 'MEDIUM';
+        font-size: 5rem;
+    }
+    .template{
+        grid-template:
+        'logo' 125px
+        'cont' auto
+        'foot' 150px;
+        /* 'nav' auto; */
+    }
+}
+
+@media(max-width: 576px){
+    body{
+        background: red;
+    }
+    body::before{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        content: 'SMALL';
+        font-size: 5rem;
+    }
+}
+
+@keyframes move {
+    0% {    margin-top: 0;}
+    50% {   margin-top: 15px;  }
+    100% {    margin-top: 0;  }
+  }
